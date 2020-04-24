@@ -49,3 +49,9 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
 
 Scenario: all ratings selected
   # see assignment
+  When I check the following ratings: PG, R, PG-13, NC-17, G
+  And I press "Refresh"
+  Then I should be on the home page
+  
+  And I should see all the movies
+
